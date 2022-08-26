@@ -18,7 +18,7 @@ function createEnemyLevelOne(playerSpecs) {
   let randomNumber = Math.floor(Math.random() * 4) + 1;
   // add icon to enemy
   // enemy.innerHTML = '<i class="fas fa-pastafarianism"></i>';
-  enemy.innerHTML = `<div><img src="../img/enemy-${randomNumber}.png"></div>`;
+  enemy.innerHTML = `<div><img src="./img/enemy-${randomNumber}.png"></div>`;
   enemy.style.width = "30px";
   enemy.style.height = "30px";
   enemy.querySelector("img").style.width = "100%";
