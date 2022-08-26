@@ -1,7 +1,7 @@
 function playerMusic() {
   let musicOff = document.querySelector("#music-off");
   let musicOn = document.querySelector("#music-on");
-  let music = new Audio("../audio/music.mp3");
+  let music = new Audio("./audio/music.mp3");
 
   // play music on "music on" button click
   musicOn.addEventListener("click", () => {
