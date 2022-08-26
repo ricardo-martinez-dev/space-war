@@ -123,12 +123,12 @@ function killEnemy(bullet, playerSpecs) {
 
         // ===== explosion
         // gif
-        enemy[i].innerHTML = `<img src="../img/explosion.gif">`;
+        enemy[i].innerHTML = `<img src="../../img/explosion.gif">`;
         enemy[i].querySelector("img").style.width = "20px";
 
         // audio
         // shot sound
-        let explosion = new Audio("../audio/explosion.mp3");
+        let explosion = new Audio("../../audio/explosion.mp3");
         // shot sound
         explosion.volume = 0.5;
         explosion.play();
