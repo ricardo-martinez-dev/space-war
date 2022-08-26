@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords" />
+    <meta name="author" content="Author's name" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fontawesome script -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+      integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./style/options/options-screen.css" />
+    <link rel="stylesheet" href="./style/main/main.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- options screen -->
+    <div id="options-screen">
+      <!-- player name -->
+      <div id="name">
+        <input id="name-input" type="text" placeholder="Type your name" />
+      </div>
+
+      <!-- music -->
+      <div id="music">
+        <h2 id="music-off">music off</h2>
+        <h2 id="music-on">music on</h2>
+      </div>
+
+      <!-- game difficulty -->
+      <div id="difficulty">
+        <button class="difficulty">easy</button>
+        <button class="difficulty">normal</button>
+        <button class="difficulty">hard</button>
+      </div>
+
+      <!-- player ship -->
+      <div id="choose-ship">
+        <div class="ship"><img src="./img/player-ship-1.png" alt="" /></div>
+        <div class="ship"><img src="./img/player-ship-2.png" alt="" /></div>
+        <div class="ship"><img src="./img/player-ship-3.png" alt="" /></div>
+      </div>
+
+      <!-- start button -->
+      <button id="start-btn">start</button>
+    </div>
+
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+
+    <!-- status bar -->
+    <div id="status">
+      <!-- player lives -->
+      <div id="lives">
+        <i class="fas fa-heart"></i>
+        <span id="life"></span>
+      </div>
+      <!-- health bar -->
+      <div id="health-bar">
+        <div id="health"></div>
+      </div>
+      <!-- overpower -->
+      <div id="power">
+        <!-- <i class="fas fa-fire"></i> -->
+        <i class="fas fa-bolt"></i>
+        <span id="overpower"></span>
+      </div>
+      <!-- health bar -->
+      <div id="power-bar">
+        <div id="power-load"></div>
+      </div>
+      <!-- enimies -->
+      <div id="enemy">
+        <i class="fas fa-pastafarianism"></i>
+        <span id="enemies"></span>
+      </div>
+      <!-- medium weapon -->
+      <div id="medium-weapon">
+        <i class="fas fa-bomb" id="medium-weapong"></i>
+        <span id="medium"></span>
+      </div>
+      <!-- heavy weapon -->
+      <div id="heavy-weapon">
+        <i class="fab fa-freebsd" id="heavy-weapong"></i>
+        <span id="heavy"></span>
+      </div>
+      <!-- score -->
+      <div id="point">
+        <i class="fas fa-dollar-sign"></i>
+        <span id="score"></span>
+      </div>
+    </div>
+
+    <!-- game screen -->
+    <div id="wrapper">
+      <!-- <div id="player"><i class="fas fa-space-shuttle"></i></div> -->
+      <div id="player">
+        <img src="./img/player-ship-2.png" alt="" id="player-ship" />
+      </div>
+    </div>
+
+    <div id="instructions">
+      <p class="shoot" id="bullet-info" style="color: yellow">
+        Spacebar : bullet
+      </p>
+      <p class="shoot" id="speed-info">S : turbo speed</p>
+      <p class="shoot" id="middle-info">D : middle Weapon</p>
+      <p class="shoot" id="heavy-info">E : heavy weapon</p>
+    </div>
+
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <script src="./js/app.js" type="module"></script>
+    <script src="./js/module/player.js" type="module"></script>
+    <script>
+      let wrapper = document.querySelector("#wrapper");
+      let gameOverMessage = document.createElement("div");
+
+      gameOverMessage.id = "final-message";
+      gameOverMessage.innerHTML = `
+        <h2>GAME OVER!</h2>
+        <div id="result">
+          <p>points:</p>
+          <p id="final-point"></p>
+          <p>enemies killed:</p>
+          <p id="enemy-killed"></p>
+          <p>time played:</p>
+          <p id="time-played"></p>
+        </div>
+        <div id="btns">
+          <button onclick="location.reload()">restart</button>
+        </div>`;
+
+      wrapper.appendChild(gameOverMessage);
+    </script>
+  </body>
+</html>
