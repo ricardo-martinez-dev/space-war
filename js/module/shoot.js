@@ -11,7 +11,7 @@ function shootBullet(playerSpecs) {
       // initiate bullet create as well as animation and deletion process
       initiateBullet(playerPosition, playerSpecs, wrapper);
 
-      let shot = new Audio("../audio/shot.mp3");
+      let shot = new Audio("../../audio/shot.mp3");
 
       // shot sound
       shot.volume = 0.2;
