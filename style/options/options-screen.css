@@ -1,0 +1,136 @@
+/* --- Google Fonts --- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  background: #101010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- container --- */
+#options-screen {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  #options-screen {
+    width: 70rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #options-screen {
+    width: 100rem;
+    height: 65rem;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+  }
+  #options-screen #music {
+    text-transform: uppercase;
+    display: flex;
+    width: 28rem;
+    justify-content: space-between;
+  }
+  #options-screen #music h2 {
+    border: 0.1rem solid white;
+    padding: 1rem 2rem;
+  }
+  #options-screen #music h2:hover {
+    cursor: pointer;
+  }
+  #options-screen #music h2:first-of-type {
+    border: 0.1rem solid yellow;
+  }
+  #options-screen #name {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #options-screen #name input {
+    width: 30%;
+    background: #303030;
+    border: 0.1rem solid white;
+    padding: 1rem 0;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+  }
+  #options-screen #difficulty {
+    width: 40rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  #options-screen #difficulty button {
+    width: 25%;
+    height: 4rem;
+    background: #303030;
+    border: 0.1rem solid white;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    outline: none;
+  }
+  #options-screen #difficulty button:hover {
+    cursor: pointer;
+  }
+  #options-screen #difficulty button:nth-last-of-type(2) {
+    border: 0.1rem solid yellow;
+  }
+  #options-screen #choose-ship {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #options-screen #choose-ship .ship {
+    width: 15rem;
+    height: 15rem;
+    border: 0.1rem solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #options-screen #choose-ship .ship:hover {
+    cursor: pointer;
+  }
+  #options-screen #choose-ship .ship:nth-last-of-type(2) {
+    border: 0.1rem solid yellow;
+  }
+  #options-screen #choose-ship .ship img {
+    height: 50%;
+  }
+  #options-screen #start-btn {
+    text-transform: uppercase;
+    padding: 1rem 5rem;
+    font-size: 3rem;
+    font-weight: 800;
+    background: #303030;
+    color: white;
+    border: 0.1rem solid white;
+    letter-spacing: 0.4rem;
+    outline: none;
+    transition: 0.3s;
+  }
+  #options-screen #start-btn:hover {
+    cursor: pointer;
+    border: 0.1rem solid yellow;
+    color: yellow;
+  }
+}/*# sourceMappingURL=options-screen.css.map */
